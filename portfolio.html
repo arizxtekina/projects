@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Aniket</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand nav-logo" href="index.html">Aniket<span>.</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+        <ul class="navbar-nav gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+  </div>
+
+  <!-- ===================== PORTFOLIO ===================== -->
+  <main class="page-wrap">
+    <div class="container">
+
+      <div class="tag">My Work</div>
+      <h1 class="section-heading mt-3">Portfolio</h1>
+      <p class="section-sub">
+        A collection of projects spanning graphic design, video editing, VFX, and motion graphics.
+      </p>
+
+      <!-- Filter Buttons -->
+      <div class="portfolio-filters">
+        <button class="filter-btn active" onclick="filterCat('all', this)">All Work</button>
+        <button class="filter-btn" onclick="filterCat('graphic', this)">Graphic Design</button>
+        <button class="filter-btn" onclick="filterCat('vfx', this)">VFX</button>
+        <button class="filter-btn" onclick="filterCat('motion', this)">Motion Graphics</button>
+      </div>
+
+      <!-- GRAPHIC DESIGN -->
+      <div class="portfolio-category" data-cat="graphic">
+        <div class="category-label">
+          <h2>🎨 Graphic Design</h2>
+          <div class="category-label-line"></div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+          <div class="col">
+            <div class="project-card graphic-card">
+              <div class="project-media" onclick="openLightbox('assets/Graphic design/project 1.jpg.jpg', 'Invitation Card Design')">
+                <div class="media-type-badge">Design</div>
+                <img src="assets/Graphic design/project 1.jpg.jpg" alt="Invitation Card Design" />
+              </div>
+              <div class="project-body">
+                <h3>Invitation Card Design</h3>
+                <p>A clean, elegant invitation card layout crafted in Photoshop/Illustrator.</p>
+                <div class="project-links">
+                  <span class="project-link-placeholder" onclick="openLightbox('assets/Graphic design/project 1.jpg.jpg', 'Invitation Card Design')">🔍 View Full Size</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="project-card graphic-card">
+              <div class="project-media" onclick="openLightbox('assets/Graphic design/company logo poster design.png', 'Company Logo Poster')">
+                <div class="media-type-badge">Design</div>
+                <img src="assets/Graphic design/company logo poster design.png" alt="Company Logo Poster" />
+              </div>
+              <div class="project-body">
+                <h3>Company Logo Poster</h3>
+                <p>Brand identity poster combining logo design with strong typographic composition.</p>
+                <div class="project-links">
+                  <span class="project-link-placeholder" onclick="openLightbox('assets/Graphic design/company logo poster design.png', 'Company Logo Poster')">🔍 View Full Size</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="project-card graphic-card">
+              <div class="project-media" onclick="openLightbox('assets/Graphic design/social media design.jpg', 'Brand Post Design')">
+                <div class="media-type-badge">Design</div>
+                <img src="assets/Graphic design/social media design.jpg" alt="Brand Post Design" />
+              </div>
+              <div class="project-body">
+                <h3>Brand Post Design</h3>
+                <p>Social media post design for a brand — balancing visual hierarchy and engagement.</p>
+                <div class="project-links">
+                  <span class="project-link-placeholder" onclick="openLightbox('assets/Graphic design/social media design.jpg', 'Brand Post Design')">🔍 View Full Size</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- VFX -->
+      <div class="portfolio-category" data-cat="vfx">
+        <div class="category-label">
+          <h2>🎬 Video Editing &amp; VFX</h2>
+          <div class="category-label-line"></div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+          <div class="col">
+            <div class="project-card">
+              <div class="project-media">
+                <div class="media-type-badge">VFX</div>
+                <a href="https://youtu.be/hXDZ7aDdYc0" target="_blank" rel="noopener">
+                  <img src="assets/thumbnails/double role.jpg" alt="Double Role Effect" />
+                </a>
+              </div>
+              <div class="project-body">
+                <h3>Double Role Effect</h3>
+                <p>A cinematic double role / split-screen compositing effect created in After Effects.</p>
+                <div class="project-links">
+                  <a class="project-link" href="https://youtu.be/hXDZ7aDdYc0" target="_blank" rel="noopener">▶ Watch on YouTube</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="project-card">
+              <div class="project-media">
+                <div class="media-type-badge">VFX</div>
+                <a href="https://youtu.be/ULveCIpsL6w" target="_blank" rel="noopener">
+                  <img src="assets/thumbnails/roto effect.jpg" alt="Roto Effect in AE" />
+                </a>
+              </div>
+              <div class="project-body">
+                <h3>Effect in AE Using Roto</h3>
+                <p>Rotoscoping-based visual effect in Adobe After Effects — isolating subjects for compositing.</p>
+                <div class="project-links">
+                  <a class="project-link" href="https://youtu.be/ULveCIpsL6w" target="_blank" rel="noopener">▶ Watch on YouTube</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="project-card">
+              <div class="project-media">
+                <div class="media-type-badge">VFX</div>
+                <a href="https://youtu.be/sx9lQ4ars5c" target="_blank" rel="noopener">
+                  <img src="assets/thumbnails/Samurai_Manipulation matte painting.png" alt="Matte Painting Animation" />
+                </a>
+              </div>
+              <div class="project-body">
+                <h3>Matte Painting Animation</h3>
+                <p>Samurai matte painting manipulation — compositing a painted environment with live footage.</p>
+                <div class="project-links">
+                  <a class="project-link" href="https://youtu.be/sx9lQ4ars5c" target="_blank" rel="noopener">▶ Watch on YouTube</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- MOTION GRAPHICS -->
+      <div class="portfolio-category" data-cat="motion">
+        <div class="category-label">
+          <h2>✨ Motion Graphics</h2>
+          <div class="category-label-line"></div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+          <div class="col">
+            <div class="project-card">
+              <div class="project-media">
+                <div class="media-type-badge">Motion</div>
+                <a href="https://youtu.be/_ffJH76P01k" target="_blank" rel="noopener">
+                  <img src="assets/thumbnails/mcdonalds.png" alt="McDonald's Explanation Motion Graphics" />
+                </a>
+              </div>
+              <div class="project-body">
+                <h3>McDonald's Explanation Motion</h3>
+                <p>An explainer-style motion graphics piece using McDonald's branding and kinetic animation.</p>
+                <div class="project-links">
+                  <a class="project-link" href="https://youtu.be/_ffJH76P01k" target="_blank" rel="noopener">▶ Watch on YouTube</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="project-card">
+              <div class="project-media">
+                <div class="media-type-badge">Short</div>
+                <a href="https://youtube.com/shorts/66AvX0Xa9WI?feature=share" target="_blank" rel="noopener">
+                  <img src="assets/thumbnails/amul kool.jpg" alt="Amul Kool Motion Graphics" />
+                </a>
+              </div>
+              <div class="project-body">
+                <h3>Amul Kool Motion Graphics</h3>
+                <p>A short-form animated motion graphics piece for Amul Kool brand — playful and colourful.</p>
+                <div class="project-links">
+                  <a class="project-link" href="https://youtube.com/shorts/66AvX0Xa9WI?feature=share" target="_blank" rel="noopener">▶ Watch Short</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="project-card">
+              <div class="project-media">
+                <div class="media-type-badge">Short</div>
+                <a href="https://youtube.com/shorts/N7Zex29A-Cc?feature=share" target="_blank" rel="noopener">
+                  <img src="assets/thumbnails/mq2.jpg" alt="McDonald's Logo Motion" />
+                </a>
+              </div>
+              <div class="project-body">
+                <h3>McDonald's Logo Motion</h3>
+                <p>A short animated logo reveal / motion treatment for McDonald's golden arches.</p>
+                <div class="project-links">
+                  <a class="project-link" href="https://youtube.com/shorts/N7Zex29A-Cc?feature=share" target="_blank" rel="noopener">▶ Watch Short</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+        <div class="footer-logo">Aniket<span>.</span></div>
+        <p class="footer-copy">© 2025 Aniket. All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="https://youtube.com/@anikettedittz?si=OJzUBRWRbEyG6mlh" title="YouTube">▶</a>
+          <a href="https://www.instagram.com/aniket_d.tekina?igsh=NDc4MXQwN2d5Y2h0" title="Instagram">◉</a>
+          <a href="#" title="LinkedIn">in</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    /* Filter */
+    function filterCat(cat, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.portfolio-category').forEach(s => {
+        s.style.display = (cat === 'all' || s.dataset.cat === cat) ? 'block' : 'none';
+      });
+    }
+
+    /* Lightbox */
+    function openLightbox(src, caption) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-img').alt = caption;
+      document.getElementById('lightbox-caption').textContent = caption;
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox(e) {
+      if (!e || e.target !== document.getElementById('lightbox-img')) {
+        document.getElementById('lightbox').classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  </script>
+</body>
+</html>
